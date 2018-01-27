@@ -11,5 +11,7 @@ public class Product {
     String name;
     String description;
     PGpoint p;
-
+    boolean isSold;
+    boolean biddingAllowed;
+    int price;
 }
