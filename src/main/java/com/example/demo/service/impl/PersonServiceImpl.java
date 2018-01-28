@@ -32,17 +32,17 @@ public class PersonServiceImpl implements PersonService {
 
     @Override
     public Iterable<Person> getAll() {
-        return null;
+        return this.personDAO.findAll();
     }
 
     @Override
-    public Iterable<Product> getProductsOnSale(int personId) {
-        return this.productDAO.
+    public Iterable<Product> getProductsOnSale(int sellerID) {
+        return this.productDAO.findAllBySellerPersonId(sellerID);
     }
 
     @Override
-    public Iterable<Product> getBoughtProducts(int personId) {
-        return null;
+    public Iterable<Product> getBoughtProducts(int buyerId) {
+        return this.productDAO.findAllByBuyerPersonId(buyerId);
     }
 
     @Override
