@@ -1,14 +1,9 @@
 package com.example.demo.service.impl;
 
 import com.example.demo.model.Product;
-import com.example.demo.persistence.ProductDAO;
 import com.example.demo.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
-
-import java.util.List;
 
 @Service
 public class ProductServiceImpl implements ProductService {
@@ -35,13 +30,13 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public List<Product> getAllProducts() {
-        return null;
+    public Iterable<Product> getAllProducts() {
+        return this.productDAO.findAll();
     }
 
     @Override
-    public Product addProduct() {
-        return null;
+    public Product addProduct(Product p) {
+        return productDAO.save(p);
     }
 
     @Override
