@@ -49,4 +49,6 @@ public interface ProductDAO extends PagingAndSortingRepository<Product, Integer>
                                      @Param("sell_type") boolean sellType,
                                      @Param("all_types") boolean allSellTypes);
 
+    Iterable<Product> findAllBySellerPersonId(int id);
+    Iterable<Product> findAllByBuyerPersonId(int id);
 }
