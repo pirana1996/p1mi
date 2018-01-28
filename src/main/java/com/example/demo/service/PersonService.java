@@ -5,13 +5,13 @@ import com.example.demo.model.Product;
 
 public interface PersonService {
 
-    Person getPerson(Long id);
+    Person getPerson(int id);
 
     Iterable<Person> getAll();
 
-    Iterable<Product> getProductsOnSale(Long personId);
+    Iterable<Product> getProductsOnSale(int personId);
 
-    Iterable<Product> getBoughtProducts(Long personId);
+    Iterable<Product> getBoughtProducts(int personId);
 
     Iterable<Product> getBiddedProducts(int personId);
 }
