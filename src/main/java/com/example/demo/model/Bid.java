@@ -19,6 +19,6 @@ public class Bid {
 
     @ManyToOne
     @JoinColumn(name = "product_id")
-    Product product;
+    public Product product;
 
 }

@@ -48,4 +48,5 @@ public interface ProductDAO extends PagingAndSortingRepository<Product, Integer>
 //                                         @Param("bid_al2") boolean biddingAllowed2, // (true if if product on bidding)
                                          @Param("sell_type") boolean sellType,
                                          @Param("all_types") boolean allSellTypes);
+
 }
