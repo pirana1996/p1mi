@@ -6,6 +6,9 @@ import java.util.List;
 @Entity
 @Table(name="product")
 public class Product {
+
+    public Product() {}
+
     @Id
     int productId;
 
@@ -36,4 +39,51 @@ public class Product {
     int price;
 
 
+    public int getProductId() {
+        return productId;
+    }
+
+    public Person getSeller() {
+        return seller;
+    }
+
+    public Person getBuyer() {
+        return buyer;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public List<Picture> getPictures() {
+        return pictures;
+    }
+
+    public List<Bid> getActualBiddings() {
+        return actualBiddings;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public boolean isSold() {
+        return isSold;
+    }
+
+    public boolean isBiddingAllowed() {
+        return biddingAllowed;
+    }
+
+    public int getPrice() {
+        return price;
+    }
 }

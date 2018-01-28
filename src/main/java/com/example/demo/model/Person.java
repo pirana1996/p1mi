@@ -21,10 +21,10 @@ public class Person {
     String description;
 
     @OneToMany(mappedBy = "seller")
-    List<Product> productsSale;
+    List<Product> productsOnSale;
 
     @OneToMany(mappedBy = "buyer")
-    List<Product> productBuy;
+    List<Product> boughtProducts;
 
     @OneToMany(mappedBy = "bidder")
     List<Bid> biddings;
