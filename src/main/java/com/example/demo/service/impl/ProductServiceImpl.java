@@ -35,13 +35,13 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public List<Product> getAllProducts() {
-        return null;
+    public Iterable<Product> getAllProducts() {
+        return this.productDAO.findAll();
     }
 
     @Override
-    public Product addProduct() {
-        return null;
+    public Product addProduct(Product p) {
+        return productDAO.save(p);
     }
 
     @Override

@@ -9,7 +9,7 @@ import java.util.List;
 public interface ProductService {
     Iterable<Product> getFilteredProducts(int categoryId, String name, int sellType);
     Iterable<Product> getAllProducts();
-    Product addProduct();
+    Product addProduct(Product p);
     Product updateProduct();
     boolean deleteProduct();
 }

@@ -7,6 +7,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 
 
+import javax.servlet.http.HttpServletResponse;
+import java.util.Optional;
+
 import static org.springframework.util.MimeTypeUtils.APPLICATION_JSON_VALUE;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
@@ -26,9 +29,13 @@ public class ProductController {
     Iterable<Product> getFilteredProducts(@RequestParam int categoryId,
                                           @RequestParam String productName,
                                           @RequestParam int sellType){
-        System.out.println("HAIL");
         return this.productService.getFilteredProducts(categoryId, productName, sellType);
-//    return null;
+    }
+
+    @RequestMapping(method = RequestMethod.POST)
+    public Product createProduct(@RequestBody Product product){
+        productService.addProduct(product);
+        return product;
     }
 
 }

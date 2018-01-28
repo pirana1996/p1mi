@@ -16,6 +16,53 @@ public class Product {
     @JoinColumn(name = "seller_id")
     Person seller;
 
+    public void setProductId(int productId) {
+        this.productId = productId;
+    }
+
+    public void setSeller(Person seller) {
+        this.seller = seller;
+    }
+
+    public void setBuyer(Person buyer) {
+        this.buyer = buyer;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    public void setPictures(List<Picture> pictures) {
+        this.pictures = pictures;
+    }
+
+    public void setActualBiddings(List<Bid> actualBiddings) {
+        this.actualBiddings = actualBiddings;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public void setSold(boolean sold) {
+        isSold = sold;
+    }
+
+    public void setBiddingAllowed(boolean biddingAllowed) {
+        this.biddingAllowed = biddingAllowed;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
 
     @ManyToOne()
     @JoinColumn(name = "buyer_id")
